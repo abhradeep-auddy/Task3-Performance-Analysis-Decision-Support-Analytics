@@ -126,37 +126,36 @@ Created an interactive executive-level dashboard to visualize business performan
 
 ## Total Sales
 
-```DAX
+DAX
 Total Sales = SUM(task2_ot[Sales])
-```
+
 
 ## Previous Month Sales
 
-```DAX
+DAX
 Previous Month Sales =
 CALCULATE(
     [Total Sales],
     PREVIOUSMONTH(task2_ot[Order_Date])
 )
-```
+
 
 ## Growth %
 
-```DAX
+DAX
 Growth % =
 DIVIDE(
     [Total Sales] - [Previous Month Sales],
     [Previous Month Sales],
     0
 )
-```
+
 
 ## Profit Margin
 
-```DAX
+DAX
 Profit Margin =
 DIVIDE(SUM(task2_ot[Profit]), SUM(task2_ot[Sales]))
-```
 
 ---
 
